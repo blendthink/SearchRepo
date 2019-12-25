@@ -4,8 +4,15 @@ import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {
+
+    private val repository: RepoRepository by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +30,22 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
+
+                if (newText.isNullOrBlank()) return false
+
+                GlobalScope.launch(Dispatchers.Main) {
+
+                    runCatching {
+                        withContext(Dispatchers.IO) {
+                            repository.getRepositories(newText)
+                        }
+                    }.onSuccess {
+                        println("Success")
+                    }.onFailure {
+                        println("Failure")
+                    }
+                }
+
                 return true
             }
         })
