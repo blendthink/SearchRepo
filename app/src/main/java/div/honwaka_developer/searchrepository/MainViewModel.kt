@@ -36,9 +36,12 @@ class MainViewModel(
                 var job: Deferred<Unit>? = null
 
                 searchWord.asFlow()
-                    .debounce(500)
+                    .debounce(2000)
                     .distinctUntilChanged()
                     .collect {
+
+                        println("okayama 検索開始！")
+
                         job?.cancel()
                         job = async(Dispatchers.Main) {
                             value = repoRepository.getRepositories(it)
@@ -55,6 +58,7 @@ class MainViewModel(
     val totalCount: LiveData<String> = _totalCount
 
     fun updateSearchWord(searchWord: String) {
+        println("okayama 検索文字を更新！")
         this.searchWord.value = searchWord
     }
 }
