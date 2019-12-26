@@ -4,6 +4,7 @@ import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterF
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -24,6 +25,10 @@ private val apiModule = module {
 
 private val repositoryModule = module {
     single { RepoRepository(get()) }
+}
+
+private val viewModelModule = module {
+    viewModel { MainViewModel(get()) }
 }
 
 private fun createApiOkHttpClient(): OkHttpClient {
@@ -54,5 +59,5 @@ private inline fun <reified T> createApi(okHttpClient: OkHttpClient, moshi: Mosh
 }
 
 object Module {
-    val modules = listOf(appModules, apiModule, repositoryModule)
+    val modules = listOf(appModules, apiModule, repositoryModule, viewModelModule)
 }

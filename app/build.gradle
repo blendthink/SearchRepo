@@ -59,11 +59,12 @@ dependencies {
     implementation "org.koin:koin-androidx-viewmodel:$koin"
     implementation "org.koin:koin-androidx-ext:$koin"
 
-    def lifecycle = '2.1.0'
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle"
+    def lifecycle = '2.1.0-alpha04'
+    def lifecycleLiveData = '2.2.0-rc03'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle"
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleLiveData"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleLiveData"
 
     def epoxy = '3.8.0'
     implementation "com.airbnb.android:epoxy:$epoxy"
