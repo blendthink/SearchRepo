@@ -69,7 +69,7 @@ dependencies {
     def epoxy = '3.8.0'
     implementation "com.airbnb.android:epoxy:$epoxy"
     implementation "com.airbnb.android:epoxy-databinding:$epoxy"
-    annotationProcessor "com.airbnb.android:epoxy-processor:$epoxy"
+    kapt "com.airbnb.android:epoxy-processor:$epoxy"
 
     def retrofit = '2.5.0'
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
