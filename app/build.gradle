@@ -115,3 +115,10 @@ task ktlint(type: JavaExec, group: "verification") {
     ignoreExitValue true
 }
 check.dependsOn ktlint
+
+task ktlintFormat(type: JavaExec, group: "formatting") {
+    description = "Fix Kotlin code style deviations."
+    main = "com.github.shyiko.ktlint.Main"
+    classpath = configurations.ktlint
+    args "-F", "src/**/*.kt"
+}
