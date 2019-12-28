@@ -15,5 +15,5 @@ interface ApiService {
         @Query("sort")
         sort: String = "starts"
 
-    ): Deferred<RepositoriesData>
+    ): Deferred<ReposData>
 }

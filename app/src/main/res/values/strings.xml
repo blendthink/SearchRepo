@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Search Repository</string>
-    <string name="search_title">reporitory name</string>
-    <string name="search_hint">Repository Name</string>
+    <string name="app_name">Search Repo</string>
+    <string name="search_title">Repo Name</string>
+    <string name="search_hint">Repo Name</string>
 </resources>

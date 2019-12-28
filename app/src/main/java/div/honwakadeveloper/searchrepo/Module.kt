@@ -23,7 +23,7 @@ private val apiModule = module {
     factory<ApiService> { createApi(get(), get()) }
 }
 
-private val repositoryModule = module {
+private val repoModule = module {
     single { RepoRepository(get()) }
 }
 
@@ -59,5 +59,5 @@ private inline fun <reified T> createApi(okHttpClient: OkHttpClient, moshi: Mosh
 }
 
 object Module {
-    val modules = listOf(appModules, apiModule, repositoryModule, viewModelModule)
+    val modules = listOf(appModules, apiModule, repoModule, viewModelModule)
 }

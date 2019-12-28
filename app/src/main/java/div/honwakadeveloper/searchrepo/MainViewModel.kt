@@ -8,23 +8,19 @@ import androidx.lifecycle.asFlow
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 
-@ExperimentalCoroutinesApi
-@FlowPreview
 class MainViewModel(
     private val repoRepository: RepoRepository
 ) : ViewModel() {
 
     private val searchWord = MutableLiveData<String>()
 
-    val repositoriesData = object : MutableLiveData<RepositoriesData>() {
+    val reposData = object : MutableLiveData<ReposData>() {
 
         override fun onActive() {
             super.onActive()
@@ -44,14 +40,14 @@ class MainViewModel(
 
                         job?.cancel()
                         job = async(Dispatchers.Main) {
-                            value = repoRepository.getRepositories(it)
+                            value = repoRepository.getRepos(it)
                         }
                     }
             }
         }
     }
 
-    private val _totalCount = Transformations.map(repositoriesData) {
+    private val _totalCount = Transformations.map(reposData) {
         it.totalCount.toString()
     }
 

@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity() {
 
                 lifecycleOwner = this@MainActivity
 
-                repositoriesData.observe(this@MainActivity, Observer {
+                reposData.observe(this@MainActivity, Observer {
                     // TODO リポジトリリスト更新処理
-                    println("$repositoriesData")
+                    println("$reposData")
                 })
             }
         }

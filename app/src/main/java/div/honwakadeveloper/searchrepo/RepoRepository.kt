@@ -4,7 +4,7 @@ class RepoRepository(
     private val apiService: ApiService
 ) {
 
-    suspend fun getRepositories(word: String): RepositoriesData {
+    suspend fun getRepos(word: String): ReposData {
         return apiService.repositoriesAsync(word).await()
     }
 }

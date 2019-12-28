@@ -4,13 +4,13 @@ import android.app.Application
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
-class SearchRepositoryApp : Application() {
+class SearchRepoApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
 
         startKoin {
-            androidContext(this@SearchRepositoryApp)
+            androidContext(this@SearchRepoApp)
             modules(Module.modules)
         }
     }
