@@ -1,4 +1,4 @@
-package div.honwaka_developer.searchrepository
+package div.honwakadeveloper.searchrepo
 
 import android.app.Application
 import org.koin.android.ext.koin.androidContext

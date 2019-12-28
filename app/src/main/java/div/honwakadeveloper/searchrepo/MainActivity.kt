@@ -1,4 +1,4 @@
-package div.honwaka_developer.searchrepository
+package div.honwakadeveloper.searchrepo
 
 import android.os.Bundle
 import android.view.Menu
@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import div.honwaka_developer.searchrepository.databinding.ActivityMainBinding
+import div.honwakadeveloper.searchrepo.databinding.ActivityMainBinding
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import org.koin.androidx.viewmodel.ext.android.viewModel

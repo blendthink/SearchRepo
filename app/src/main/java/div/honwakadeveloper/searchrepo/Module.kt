@@ -1,4 +1,4 @@
-package div.honwaka_developer.searchrepository
+package div.honwakadeveloper.searchrepo
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi

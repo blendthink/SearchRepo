@@ -1,4 +1,4 @@
-package div.honwaka_developer.searchrepository
+package div.honwakadeveloper.searchrepo
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

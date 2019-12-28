@@ -2,7 +2,7 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="div.honwaka_developer.searchrepository"
+    package="div.honwakadeveloper.searchrepo"
     >
 
     <dist:module dist:instant="true" />

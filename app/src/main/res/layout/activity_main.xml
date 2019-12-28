@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="div.honwaka_developer.searchrepository.MainViewModel"
+            type="div.honwakadeveloper.searchrepo.MainViewModel"
             />
 
     </data>

@@ -10,7 +10,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "div.honwaka_developer.searchrepository"
+        applicationId "div.honwakadeveloper.searchrepo"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
