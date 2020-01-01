@@ -1,8 +1,11 @@
-package div.honwakadeveloper.searchrepo
+package div.honwakadeveloper.searchrepo.di
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import div.honwakadeveloper.searchrepo.data.ApiService
+import div.honwakadeveloper.searchrepo.data.RepoRepository
+import div.honwakadeveloper.searchrepo.ui.MainViewModel
 import okhttp3.OkHttpClient
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -20,7 +23,12 @@ private val appModules = module {
 }
 
 private val apiModule = module {
-    factory<ApiService> { createApi(get(), get()) }
+    factory<ApiService> {
+        createApi(
+            get(),
+            get()
+        )
+    }
 }
 
 private val repoModule = module {
@@ -59,5 +67,10 @@ private inline fun <reified T> createApi(okHttpClient: OkHttpClient, moshi: Mosh
 }
 
 object Module {
-    val modules = listOf(appModules, apiModule, repoModule, viewModelModule)
+    val modules = listOf(
+        appModules,
+        apiModule,
+        repoModule,
+        viewModelModule
+    )
 }

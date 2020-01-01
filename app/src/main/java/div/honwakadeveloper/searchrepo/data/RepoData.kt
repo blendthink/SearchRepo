@@ -1,4 +1,4 @@
-package div.honwakadeveloper.searchrepo
+package div.honwakadeveloper.searchrepo.data
 
 import com.squareup.moshi.Json
 

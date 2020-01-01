@@ -1,4 +1,4 @@
-package div.honwakadeveloper.searchrepo
+package div.honwakadeveloper.searchrepo.data
 
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET

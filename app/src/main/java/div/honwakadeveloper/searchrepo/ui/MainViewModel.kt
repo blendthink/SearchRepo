@@ -1,11 +1,11 @@
-package div.honwakadeveloper.searchrepo
+package div.honwakadeveloper.searchrepo.ui
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asFlow
 import androidx.lifecycle.viewModelScope
+import div.honwakadeveloper.searchrepo.data.RepoRepository
+import div.honwakadeveloper.searchrepo.data.ReposData
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -46,12 +46,6 @@ class MainViewModel(
             }
         }
     }
-
-    private val _totalCount = Transformations.map(reposData) {
-        it.totalCount.toString()
-    }
-
-    val totalCount: LiveData<String> = _totalCount
 
     fun updateSearchWord(searchWord: String) {
         println("okayama 検索文字を更新！")

@@ -1,4 +1,4 @@
-package div.honwakadeveloper.searchrepo
+package div.honwakadeveloper.searchrepo.data
 
 class RepoRepository(
     private val apiService: ApiService
