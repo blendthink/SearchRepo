@@ -8,12 +8,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import div.honwakadeveloper.searchrepo.R
 import div.honwakadeveloper.searchrepo.databinding.ActivityMainBinding
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.FlowPreview
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-@FlowPreview
-@ExperimentalCoroutinesApi
 class MainActivity : AppCompatActivity() {
 
     private val mainViewModel: MainViewModel by viewModel()
