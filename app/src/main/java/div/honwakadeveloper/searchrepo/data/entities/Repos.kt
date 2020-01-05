@@ -1,8 +1,8 @@
-package div.honwakadeveloper.searchrepo.data
+package div.honwakadeveloper.searchrepo.data.entities
 
 import com.squareup.moshi.Json
 
-data class ReposData(
+data class Repos(
 
     @Json(name = "total_count")
     val totalCount: Int,
@@ -11,5 +11,5 @@ data class ReposData(
     val incompleteResult: Boolean,
 
     @Json(name = "items")
-    val items: List<RepoData>
+    val items: List<Repo>
 )

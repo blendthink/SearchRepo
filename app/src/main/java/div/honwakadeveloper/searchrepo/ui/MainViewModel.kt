@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asFlow
 import androidx.lifecycle.viewModelScope
 import div.honwakadeveloper.searchrepo.data.RepoRepository
-import div.honwakadeveloper.searchrepo.data.ReposData
+import div.honwakadeveloper.searchrepo.data.entities.Repos
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -20,7 +20,7 @@ class MainViewModel(
 
     private val searchWord = MutableLiveData<String>()
 
-    val reposData = object : MutableLiveData<ReposData>() {
+    val reposData = object : MutableLiveData<Repos>() {
 
         override fun onActive() {
             super.onActive()
