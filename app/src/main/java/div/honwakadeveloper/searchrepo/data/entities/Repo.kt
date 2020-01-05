@@ -26,7 +26,7 @@ data class Repo(
     val htmlUrl: String,
 
     @Json(name = "description")
-    val description: String,
+    val description: String?,
 
     @Json(name = "fork")
     val fork: Boolean,
