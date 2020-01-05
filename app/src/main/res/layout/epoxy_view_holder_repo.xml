@@ -41,7 +41,7 @@
                 app:layout_constraintStart_toEndOf="@id/repo_homepage"
                 app:layout_constraintTop_toTopOf="@id/repo_homepage" />
 
-            <com.google.android.material.button.MaterialButtonToggleGroup
+            <div.honwakadeveloper.searchrepo.ui.components.MaterialButtonGroup
                 android:id="@+id/watch_group"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -65,9 +65,9 @@
                     android:layout_weight="1"
                     android:text="12345" />
 
-            </com.google.android.material.button.MaterialButtonToggleGroup>
+            </div.honwakadeveloper.searchrepo.ui.components.MaterialButtonGroup>
 
-            <com.google.android.material.button.MaterialButtonToggleGroup
+            <div.honwakadeveloper.searchrepo.ui.components.MaterialButtonGroup
                 android:id="@+id/star_group"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -93,9 +93,9 @@
                     android:layout_weight="1"
                     android:text="12345" />
 
-            </com.google.android.material.button.MaterialButtonToggleGroup>
+            </div.honwakadeveloper.searchrepo.ui.components.MaterialButtonGroup>
 
-            <com.google.android.material.button.MaterialButtonToggleGroup
+            <div.honwakadeveloper.searchrepo.ui.components.MaterialButtonGroup
                 android:id="@+id/fork_group"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -115,13 +115,14 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/fork_count_button"
-                    style="?attr/materialButtonOutlinedStyle"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    app:backgroundTint="@android:color/transparent"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="12345" />
 
-            </com.google.android.material.button.MaterialButtonToggleGroup>
+            </div.honwakadeveloper.searchrepo.ui.components.MaterialButtonGroup>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/repo_description"
