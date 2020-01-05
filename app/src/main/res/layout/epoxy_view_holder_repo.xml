@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="repo"
+            type="div.honwakadeveloper.searchrepo.data.entities.Repo" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/repo_homepage"
+                style="@style/IconOnlyOutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_home"
+                app:iconTint="@android:color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/repo_full_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="xiaoyaodaxia/AndrdoidPlugin_JAR"
+                app:layout_constraintBottom_toBottomOf="@id/repo_homepage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/repo_homepage"
+                app:layout_constraintTop_toTopOf="@id/repo_homepage" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/watch_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@id/star_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/repo_homepage">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/watch_button"
+                    style="@style/IconOnlyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_watch"
+                    app:iconTint="@android:color/black" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/watch_count_button"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="12345" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/star_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toStartOf="@id/fork_group"
+                app:layout_constraintStart_toEndOf="@id/watch_group"
+                app:layout_constraintTop_toBottomOf="@id/repo_homepage">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/star_button"
+                    style="@style/IconOnlyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_star"
+                    app:iconGravity="textStart"
+                    app:iconTint="@android:color/black" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/star_count_button"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="12345" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/fork_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/star_group"
+                app:layout_constraintTop_toBottomOf="@id/repo_homepage">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fork_button"
+                    style="@style/IconOnlyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_forked"
+                    app:iconGravity="textStart"
+                    app:iconTint="@android:color/black" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fork_count_button"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="12345" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/repo_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="android load jar dynamic."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/watch_group" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>
