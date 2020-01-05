@@ -35,7 +35,7 @@ data class Repo(
     val url: String,
 
     @Json(name = "homepage")
-    val homepage: String,
+    val homepage: String?,
 
     @Json(name = "size")
     val size: Int,
@@ -47,7 +47,7 @@ data class Repo(
     val watchersCount: Int,
 
     @Json(name = "language")
-    val language: String,
+    val language: String?,
 
     @Json(name = "forks_count")
     val forksCount: Int,
@@ -56,7 +56,7 @@ data class Repo(
     val openIssuesCount: Int,
 
     @Json(name = "master_branch")
-    val masterBranch: String,
+    val masterBranch: String?,
 
     @Json(name = "default_branch")
     val defaultBranch: String,

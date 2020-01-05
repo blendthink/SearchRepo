@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import div.honwakadeveloper.searchrepo.R
 import div.honwakadeveloper.searchrepo.databinding.ActivityMainBinding
+import div.honwakadeveloper.searchrepo.ui.repos.RepoEpoxyController
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
             this, R.layout.activity_main
         ).apply {
 
+            val controller = RepoEpoxyController()
             viewModel = mainViewModel.apply {
 
                 lifecycleOwner = this@MainActivity
@@ -28,8 +30,12 @@ class MainActivity : AppCompatActivity() {
                 reposData.observe(this@MainActivity, Observer {
                     // TODO リポジトリリスト更新処理
                     println("$reposData")
+
+                    controller.setData(reposData.value?.items)
                 })
             }
+
+            mainReposView.setController(controller)
         }
     }
 
